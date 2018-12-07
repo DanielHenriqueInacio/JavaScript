@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        var idade = parseInt(prompt('Quantos anos você tem?:'));
+    
+
+    if (idade >= 18) {
+        alert('Você é maior de 18 anos. Então você pode fazer o exame pra tirar a carteira de motorista')
+        var exame = prompt('Passou no exame?:');
+    
+        if (exame.toUpperCase() == 'S') {
+            alert('Você é maior de 18 anos e passou no exame. Então você pode tirar a carteira de motorista')
+        }else if (exame.toLocaleUpperCase() == 'N') {
+            alert("Mesmo com idade, você nao passou no exame.");
+        }else {
+            alert('Opção Inválida');
+        }
+    }else {
+        alert('Você não é maior de 18 anos. Então não pode fazer o exame pra tirar a carteira de motorista.');
+    }
+    </script>
+</body>
+</html>

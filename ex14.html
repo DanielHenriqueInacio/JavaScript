@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" name="nome2" id="nome" placeholder="Nome">
+        <input type="email" name="email" id="email2" placeholder="Email">
+        <button type="button" onclick="dig()">Clicar</button> 
+
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+            <tbody id="lista">
+
+            </tbody>
+
+        </table>
+
+    <script type="text/javascript">
+        function dig() {
+            var nom = document.getElementById("nome").value;
+            var tex = document.getElementById("email2").value;
+            
+            if(nom == "" || tex == "") {
+                alert("Preencha todos os campos");
+            }else{
+                var item  = "<tr>";
+                    item += "<td>" + nom + "</td>";
+                    item += "<td>" + tex + "</td>";
+                    item += "</tr>";
+
+                document.getElementById("lista").innerHTML += item;
+
+                document.getElementById("nome").value = "";
+                document.getElementById("email2").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
